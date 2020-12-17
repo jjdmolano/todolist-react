@@ -1,3 +1,15 @@
+# To-Do List App made for Calibr8 Digital Exam
+
+This app was made as an exercise for my application as a junior full stack developer.
+
+The app uses React Router to navigate between the pages. Unfortunately I do not know how to use Redux and used the React hook, UseContext to manage the user state.
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
