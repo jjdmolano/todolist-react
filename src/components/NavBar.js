@@ -1,12 +1,23 @@
-import React from 'react'
+import { React, useContext } from 'react'
+import { Link } from 'react-router-dom'
+import UserContext from '../UserContext'
+import styles from './NavBar.module.css'
 
 export default function NavBar() {
-    return (
-        <nav>
-            <li>Home</li>
-            <li>To-Do List</li>
-            <li>Login</li>
-            <li>Logout</li>
-        </nav>
-        )
+    const { user, unsetUser } = useContext(UserContext)
+
+	return (
+		<nav>
+            <ul className={styles.navbar}>
+                <li><Link to='/'>Home</Link></li>
+                {(user.id === null)
+                    ?   <li><Link to='login'>Login</Link></li>
+                    :   <>
+                            <li><Link to='/todo'>ToDo List</Link></li>
+                            <li><Link to='/' onClick={unsetUser}>Logout</Link></li>
+                        </>
+                }
+            </ul>
+		</nav>
+	)
 }
