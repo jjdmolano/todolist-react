@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
@@ -7,33 +7,36 @@ import Home from './components/Home'
 import Login from './components/Login'
 import NavBar from './components/NavBar'
 import ToDo from './components/ToDo'
+import NotFound from './components/NotFound'
 
 function App() {
+	const [user, setUser] = useState({
+		id: null
+	})
 
-    const [ user, setUser ] = useState({
-        id: null
-    })
-
-    const unsetUser = () => {
-        localStorage.clear()
-        setUser ({
-            id: null
-        })
-    }
+	const unsetUser = () => {
+		localStorage.clear()
+		setUser({
+			id: null
+		})
+	}
 
 	return (
-		<UserProvider value={{user, setUser, unsetUser}}>
+		<UserProvider value={{ user, setUser, unsetUser }}>
 			<NavBar />
 			<Switch>
 				<Route exact path='/'>
-                    <Home />
-                </Route>
+					<Home />
+				</Route>
 				<Route exact path='/login'>
-                    <Login />
-                </Route>
+					<Login />
+				</Route>
 				<Route exact path='/todo'>
-                    <ToDo />
-                </Route>
+					<ToDo />
+				</Route>
+				<Route>
+					<NotFound />
+				</Route>
 			</Switch>
 		</UserProvider>
 	)
@@ -41,7 +44,7 @@ function App() {
 
 ReactDOM.render(
 	<BrowserRouter>
-        <App />
-    </BrowserRouter>,
+		<App />
+	</BrowserRouter>,
 	document.getElementById('root')
 )

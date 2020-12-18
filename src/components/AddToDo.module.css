@@ -1,0 +1,35 @@
+.main {
+    padding: 1em;
+    height: inherit;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.main input {
+    height: 3em;
+    width: 90%;
+    white-space: nowrap;
+    align-self: center;
+    text-align: center;
+    border-style: none;
+}
+
+.main button {
+    height: 3em;
+    width: 10%;
+    white-space: nowrap;
+    align-self: center;
+    text-align: center;
+    background-color: #12263a;
+    border-color: #12263a;
+    border-style: none;
+    color: white;
+}
+
+button i {
+    margin: 0;
+    padding: 0;
+    color: white;
+}

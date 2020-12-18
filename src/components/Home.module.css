@@ -1,0 +1,30 @@
+.main {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main h1 {
+    margin: 1em;
+    padding: 1em;
+}
+
+.main button {
+    margin-top: 1em;
+    padding: 1em;
+    width: 12em;
+    white-space: nowrap;
+    align-self: center;
+    text-align: center;
+    background-color: #12263a;
+    border-style: none;
+    border-color: #12263a;
+    border-radius: 5px;
+}
+
+button > a {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
