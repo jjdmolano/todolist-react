@@ -11,14 +11,12 @@ export default function ToDoList({ todos, setTodos }) {
 					return (
 						<li key={todo.id}>
 							<UpdateToDo
+								todos={todos}
+								setTodos={setTodos}
 								todoId={todo.id}
 								todoText={todo.text}
 							/>
-							<DeleteToDo
-								todoId={todo.id}
-								todos={todos}
-								setTodos={setTodos}
-							/>
+							<DeleteToDo todoId={todo.id} todos={todos} setTodos={setTodos} />
 						</li>
 					)
 				})

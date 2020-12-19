@@ -3,7 +3,6 @@
     height: inherit;
     width: 100%;
     display: flex;
-    text-align: center;
     justify-content: center;
 }
 
@@ -12,8 +11,8 @@
     width: 90%;
     white-space: nowrap;
     align-self: center;
-    text-align: center;
     border-style: none;
+    padding-left: 2em;
 }
 
 .main button {

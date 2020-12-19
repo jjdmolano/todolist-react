@@ -2,13 +2,11 @@
 
 This app was made as an exercise for my application as a junior full stack developer.
 
-The app uses React Router to navigate between the pages. Unfortunately I do not know how to use Redux and used the React hook, UseContext to manage the user state.
+The app uses React Router to navigate between the pages. Instead of Redux, I used the React hooks useState and useContext to manage states.
 
+In order to access the todo list, the user must login first. If the user tries to access the page without logging in, the list will not show and will have a button to redirect them back to the login page.
 
-
-
-
-
+This app can create, update, delete, and mark a todo as done.
 
 # Getting Started with Create React App
 

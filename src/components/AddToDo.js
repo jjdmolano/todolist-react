@@ -2,14 +2,14 @@ import React from 'react'
 import styles from './AddToDo.module.css'
 
 export default function AddToDo({ todoItem, setTodoItem, todos, setTodos }) {
+	// add new todo object in array
 	const addToDo = e => {
 		e.preventDefault()
 		setTodos([
 			...todos,
 			{
 				id: Math.random(),
-				text: todoItem,
-				isComplete: false
+				text: todoItem
 			}
 		])
 		setTodoItem('')
@@ -24,7 +24,7 @@ export default function AddToDo({ todoItem, setTodoItem, todos, setTodos }) {
 				required
 			/>
 			<button type='submit' onClick={e => addToDo(e)}>
-                <i className="fas fa-plus" />
+				<i className='fas fa-plus' />
 			</button>
 		</form>
 	)
