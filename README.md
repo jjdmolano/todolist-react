@@ -6,6 +6,9 @@ The app uses React Router to navigate between the pages. Instead of Redux, I use
 
 In order to access the todo list, the user must login first. The login function is connected to a basic Node app to authenticate the user.
 
+
+**Enter `npm start` in the CLI or terminal to start the app.**
+
 **Username is `User` and Password is `password`. Any other entered username or password will not work.**
 
  If the user tries to access the page without logging in, the list will not show and will have a button to redirect them back to the login page.
