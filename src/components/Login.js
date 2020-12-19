@@ -25,7 +25,7 @@ export default function Login() {
 		})
 			.then(res => res.json())
 			.then(data => {
-				if (data.id === 'Invalid') {
+				if (data === false) {
 					setError(true)
 				} else {
 					setError(false)
@@ -65,7 +65,7 @@ export default function Login() {
 				<button onClick={e => userLogin(e)}>
 					<strong>LOGIN</strong>
 				</button>
-				{error ? <h3>Invalid entry.</h3> : null}
+				{error ? <h3>Login failed. Please try again.</h3> : null}
 			</form>
 		</main>
 	)
